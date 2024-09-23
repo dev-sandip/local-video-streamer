@@ -42,7 +42,7 @@ Local Video Streamer is a Next.js-based web application designed to serve and st
 
 2. Open a web browser and navigate to `http://localhost:3000` (or the appropriate local IP address if accessing from another device on the network).
 
-3. Use the dropdown menu to select and play videos from your collection.
+3. For streaming vidoes keep all the videos on the `public/videos` folder then it will be automatically fetched up on web app and enjoy!
 
 ## 🌐 Accessing Over the Network
 
