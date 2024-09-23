@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎬 Local Video Streamer
 
-## Getting Started
+## 📝 Description
 
-First, run the development server:
+Local Video Streamer is a Next.js-based web application designed to serve and stream video files from your laptop over your local network. This project allows you to easily access and watch your personal movie collection from any device connected to your home network.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## ✨ Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- 🗂 Browse and select videos from your local collection
+- 📺 Stream videos directly in the browser
+- ℹ️ Display video metadata (file size, last modified date)
+- 🖱 Simple and intuitive user interface
+- 📱 Responsive design for various screen sizes
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠 Prerequisites
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- 📦 Node.js (v14 or later recommended)
+- 📦 npm (comes with Node.js)
+- 🎥 A collection of video files (.mp4, .webm, .ogg, .mkv supported)
 
-## Learn More
+## 🚀 Installation
 
-To learn more about Next.js, take a look at the following resources:
+1. Clone this repository or download the source code:
+   ```
+   git clone https://github.com/dev-sandip/local-video-streamer.git
+   cd local-video-streamer
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. Install the dependencies:
+   ```
+   npm install
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. Place your video files in the `public/videos` directory of the project.
 
-## Deploy on Vercel
+## 🏃‍♂️ Usage
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Start the development server:
+   ```
+   npm run dev
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+2. Open a web browser and navigate to `http://localhost:3000` (or the appropriate local IP address if accessing from another device on the network).
+
+3. Use the dropdown menu to select and play videos from your collection.
+
+## 🌐 Accessing Over the Network
+
+To access the video streamer from other devices on your local network:
+
+1. Find your computer's local IP address (e.g., 192.168.1.100).
+2. On the other device, open a web browser and go to `http://[YOUR_IP_ADDRESS]:3000` (replace [YOUR_IP_ADDRESS] with your actual IP address).
+
+Note: Ensure that your firewall settings allow incoming connections on port 3000, or whichever port you've configured for the Next.js server.
+
+## 🎨 Customization
+
+- To change the supported video formats, modify the file extension filter in `app/api/videos/route.ts`.
+- To customize the appearance, edit the React components in `app/components/LocalVideoPlayerComponent.tsx`.
+
+## 🔒 Security Considerations
+
+This application is designed for use on a trusted local network. It does not include authentication or encryption features. Do not expose this server directly to the internet without implementing proper security measures.
+
+## 🤝 Contributing
+
+Contributions to improve Local Video Streamer are welcome. Please feel free to submit pull requests or create issues for bugs and feature requests.
+
+## 📄 License
+
+MIT
+
+## 🙏 Acknowledgments
+
+- Built with [Next.js](https://nextjs.org/)
+- UI components from [shadcn/ui](https://ui.shadcn.com/)
